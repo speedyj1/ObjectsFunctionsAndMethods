@@ -163,11 +163,17 @@ def lines():
     line2.thickness = 10
     line2.attach_to(window)
     window.render()
+    midpoint = rg.Line.get_midpoint(line2)
+    midpointx = (x2_1 + x2_2)/2
+    midpointy = (y2_1 + y2_2)/2
+    print(midpoint)
+    print(midpointx)
+    print(midpointy)
 
     window.close_on_mouse_click()
 
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     # ------------------------------------------------------------------
 
 
