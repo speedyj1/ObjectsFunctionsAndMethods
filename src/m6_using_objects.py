@@ -145,15 +145,25 @@ def lines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     window = rg.RoseWindow()
-    x1 = 100
-    y1 = 100
-    x2 = 200
-    y2 =200
+    x1 = 50
+    y1 = 50
+    x2 = 100
+    y2 =100
     start1 = rg.Point(x1, y1)
     end1 = rg.Point(x2, y2)
     line1 = rg.Line(start1, end1)
     line1.attach_to(window)
+    x2_1 = 100
+    y2_1 = 150
+    x2_2 = 200
+    y2_2 = 250
+    start2 = rg.Point(x2_1, y2_1)
+    end2 = rg.Point(x2_2, y2_2)
+    line2 = rg.Line(start2, end2)
+    line2.thickness = 10
+    line2.attach_to(window)
     window.render()
+
     window.close_on_mouse_click()
 
     # ------------------------------------------------------------------
