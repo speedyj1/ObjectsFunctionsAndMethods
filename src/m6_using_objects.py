@@ -16,6 +16,7 @@ def main():
     # Test your functions by putting calls to them here:
     #two_circles()
     circle_and_rectangle()
+    lines()
 
 def two_circles():
     """
@@ -82,20 +83,36 @@ def circle_and_rectangle():
            150.0
     """
     window = rg.RoseWindow()
-    centerpoint = rg.Point(300, 100)
+    x_coordinate = 300
+    y_coordinate = 100
+    center = rg.Point(x_coordinate, y_coordinate)
     radius = 30
-    circle = rg.Circle(centerpoint, radius)
+    circle = rg.Circle(center, radius)
     circle.fill_color = 'blue'
     circle.attach_to(window)
-    point1 = rg.Point(100, 150)
-    point2 = rg.Point(200, 50)
+    point1x = 100
+    point1y = 150
+    point2x = 200
+    point2y = 50
+    point1 = rg.Point(point1x, point1y)
+    point2 = rg.Point(point2x, point2y)
     rectangle = rg.Rectangle(point1, point2)
     rectangle.fill_color = 'red'
     rectangle.attach_to(window)
     window.render()
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print(circle.center)
+    print(x_coordinate)
+    print(y_coordinate)
+    print(rectangle.outline_thickness)
+    print(rectangle.fill_color)
+    print((point1x + point2x)/2, (point1y + point2y)/2)
+    print((point1x + point2x)/2)
+    print((point1y + point2y)/2)
     window.close_on_mouse_click()
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -127,6 +144,18 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
+    window = rg.RoseWindow()
+    x1 = 100
+    y1 = 100
+    x2 = 200
+    y2 =200
+    start1 = rg.Point(x1, y1)
+    end1 = rg.Point(x2, y2)
+    line1 = rg.Line(start1, end1)
+    line1.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+
     # ------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     # ------------------------------------------------------------------
